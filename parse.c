@@ -279,7 +279,7 @@ int Dedi_Search_Chip_Db(long RDIDCommand,
 					 pch=strstr(file_line_buf,"ManufactureID=");
 					 if(pch != NULL)
 					 {
-						 memset(test, '\0', );
+						 memset(test, '\0', testbufsize);
 						 strcpy(test,pch+strlen("ManufactureID="));
 						 tok = strtok(test,"\"");
 						 printf("ManufactureID = 0x%lx\n",strtol(tok,NULL,16));
